@@ -1,0 +1,70 @@
+This module gies access to the following functions which makes python programming easier than before. 
+
+  fact() - gives the factorial of a given number
+  ilen() - returns the number of digits in the given integer
+  simint() - returns the simple interest
+  distance() - it gives the distance between the given co-ordinates
+  midpt() - gives the midpoint of the given pts
+  fibo() - generates a fibonacci series till the upper limit
+  iseven() - checks whether the given input is even or not
+  isodd() - checks whether the given input is odd or not
+  isleap() - checks whether the given input is a leap year or not
+  sumnat() - returns the sum of natural numbers upto n terms
+  sumeven() - returns the sum of even numbers upto n terms
+  sumodd() - returns the sum of odd numbers upto n terms
+  sumsq() - returns the sum of squares upto n terms
+  aprog() - returns an arithmetic progression
+  gprog() - returns an geometric progression
+  hprog() - returns an harmonic progression
+  aseries() - returns an arithmetic series
+  gseries() - returns an geometric series
+  hseries() - returns an harmonic series
+  reciprocal() - returns the reciprocal of the given input
+  addinv() - returns the additive inverse of the given input
+  mulinv() - returns the multiplicative inverse of the given input
+  isprime() - checks whether the given input is prime or not
+  iscomposite() - checks whether the given input is composite or not
+  prime() - returns the sequence of prime numbers till the upper limit
+  composite() - returns the sequence of composite numbers till the upper limit
+  perimeter_sq() - gives the perimeter of the square
+  perimeter_rec() - gives the perimeter of the rectangle
+  perimeter_parallelogram() - gives the perimeter of the parallelogram
+  perimeter_tri() - gives the perimeter of the triangle
+  perimeter_trapezium() - gives the perimeter of the trapezium
+  perimeter_cir() - gives the perimeter of the circle
+  area_tri() - gives the area of the triangle
+  area_sq() - gives the area of the square
+  area_rec() - gives the area of the rectangle
+  area_cir() - gives the area of the circle
+  area_sector() - gives the area of the sector
+  area_parallelogram() - gives the area of the parallelogram
+  area_trapezium() - gives the area of the trapezium
+  area_ellipse() - gives the area of the ellipse
+  area_cube() - gives the area of the cube
+  area_rectangular_prism() - gives the area of the rectangular_prism
+  area_torus() - gives the area of the torus
+  vol_cube() - gives the volume of the cube
+  vol_cuboid() - gives the volume of the cuboid
+  vol_rectangular_prism() - gives the volume of the rectangular_prism
+  vol_ellipsoid() - gives the volume of the ellipsoid
+  vol_pyramid() - gives the volume of the pyramid
+  vol_torus() - gives the volume of the torus
+  csa_scylinder() - gives the curved surface area of the solid cylinder
+  tsa_scylinder() - gives the total surface area of the solid cylinder
+  vol_scylinder() - gives the volume of the solid cylinder
+  csa_hcylinder() - gives the curved surface area of the hollow cylinder
+  tsa_hcylinder() - gives the total surface area of the hollow cylinder
+  vol_hcylinder() - gives the volume of the solid cylinder
+  csa_scone() - gives the curved surface area of the solid cone
+  tsa_scone() - gives the total surface area of the solid cone
+  vol_scone() - gives the volume of the solid cone
+  vol_frustum() - gives the volume of the frustum
+  csa_ssphere() - gives the curved surface area of the solid sphere
+  vol_ssphere() - gives the volume of the solid sphere
+  vol_hsphere() - gives the volume of the hollow sphere
+  csa_shemisphere() - gives the curved surface area of the solid hemisphere
+  tsa_shemisphere() - gives the total surface area of the solid hemisphere
+  vol_shemisphere() - gives the volume of the solid hemisphere
+  csa_hhemisphere() - gives the curved surface area of the hollow hemisphere
+  tsa_hhemisphere() - gives the curved surface area of the hollow hemisphere
+  vol_hhemisphere() - gives the volume of the hollow hemisphere
