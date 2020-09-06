@@ -221,9 +221,12 @@ def aprog(a,d,n):
     if (((isinstance(a,int) or isinstance(a,float)) and (isinstance(d,int) or isinstance(d,float))) and isinstance(n,int))==False:
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
-        for i in range(n):
-            print(a+(i*d),end=', ')
-        print('...',end='')
+        if n<0:
+            raise TypeError("Number of terms should be positive")
+        else:
+            for i in range(n):
+                print(a+(i*d),end=', ')
+            print('...',end='')
 
 # gprog() - returns an geometric progression
 # inputs - 3(first term, common ratio and number of terms)
@@ -232,10 +235,13 @@ def gprog(a,r,n):
     if (((isinstance(a,int) or isinstance(a,float)) and (isinstance(r,int) or isinstance(r,float))) and isinstance(n,int))==False:
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
-        print(a, end=', ')
-        for i in range(1,n):
-            print(a*(r**i),end=', ')
-        print('...',end='')
+        if n<0:
+            raise TypeError("Number of terms should be positive")
+        else:
+            print(a, end=', ')
+            for i in range(1,n):
+                print(a*(r**i),end=', ')
+            print('...',end='')
 
 # hprog() - returns an harmonic progression
 # inputs - 3(first term, common difference and number of terms)
@@ -244,9 +250,12 @@ def hprog(a,d,n):
     if (((isinstance(a,int) or isinstance(a,float)) and (isinstance(d,int) or isinstance(d,float))) and isinstance(n,int))==False:
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
-        for i in range(n):
-            print((a+(i*d))**(-1),end=', ')
-        print('...',end='')
+        if n<0:
+            raise TypeError("Number of terms should be positive")
+        else:
+            for i in range(n):
+                print((a+(i*d))**(-1),end=', ')
+            print('...',end='')
 
 # aseries() - returns an arithmetic series
 # inputs - 3(first term, common difference and number of terms)
@@ -255,10 +264,13 @@ def aseries(a,d,n):
     if (((isinstance(a,int) or isinstance(a,float)) and (isinstance(d,int) or isinstance(d,float))) and isinstance(n,int))==False:
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
-        sum=0
-        for i in range(n):
-            sum+=a+(i*d)
-        return sum
+        if n<0:
+            raise TypeError("Number of terms should be positive")
+        else:
+            sum=0
+            for i in range(n):
+                sum+=a+(i*d)
+            return sum
 
 # gseries() - returns an geometric series
 # inputs - 3(first term, common ratio and number of terms)
@@ -267,10 +279,13 @@ def gseries(a,r,n):
     if (((isinstance(a,int) or isinstance(a,float)) and (isinstance(r,int) or isinstance(r,float))) and isinstance(n,int))==False:
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
-        sum=0
-        for i in range(n):
-            sum+=a*(r**i)
-        return sum
+        if n<0:
+            raise TypeError("Number of terms should be positive")
+        else:
+            sum=0
+            for i in range(n):
+                sum+=a*(r**i)
+            return sum
 
 # hseries() - returns an harmonic series
 # inputs - 3(first term, common difference and number of terms)
@@ -279,10 +294,13 @@ def hseries(a,d,n):
     if (((isinstance(a,int) or isinstance(a,float)) and (isinstance(d,int) or isinstance(d,float))) and isinstance(n,int))==False:
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
-        sum=0
-        for i in range(n):
-            sum+=(a+(i*d))**(-1)
-        return sum
+        if n<0:
+            raise TypeError("Number of terms should be positive")
+        else:
+            sum=0
+            for i in range(n):
+                sum+=(a+(i*d))**(-1)
+            return sum
 
 # reciprocal() - returns the reciprocal of the given input
 # input - an integer other than zero
