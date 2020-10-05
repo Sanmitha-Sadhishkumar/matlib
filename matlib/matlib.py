@@ -21,7 +21,7 @@ def fact(a):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if a<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             f=1
             if f==0:
@@ -53,7 +53,7 @@ def simint(p,n,r):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (p<0 or n<0) or r<0:
-        raise TypeError('Input should be positive')
+        raise ValueError('Input should be positive')
     else:
         amt=p*n*r
         return amt/100
@@ -96,7 +96,7 @@ def fibo(n):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if n<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             a,b,c=-1,1,0
             for i in range(n):
@@ -114,7 +114,7 @@ def iseven(a):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if a<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             if a%2==0:
                 return True
@@ -129,7 +129,7 @@ def isodd(a):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if a<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             if a%2!=0:
                 return True
@@ -145,7 +145,7 @@ def isleap(year):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if a<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             if (year % 4) == 0:
                 if (year % 100) == 0:
@@ -166,7 +166,7 @@ def sumnat(n):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if n<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             a=n*(n+1)
             b=a//2
@@ -180,7 +180,7 @@ def sumeven(n):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if n<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             n=n//2
             a=n*(n+1)
@@ -194,7 +194,7 @@ def sumodd(n):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if n<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             if n%2==0:
                 n-=1
@@ -209,7 +209,7 @@ def sumsq(n):
         raise TypeError("Invalid inputs for type 'int'")
     else:
         if a<0:
-            raise TypeError('Input should be positive')
+            raise ValueError('Input should be positive')
         else:
             m,o=n+1,(2*n)+1
             return (n*m*o)/6
@@ -222,7 +222,7 @@ def aprog(a,d,n):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if n<0:
-            raise TypeError("Number of terms should be positive")
+            raise ValueError("Number of terms should be positive")
         else:
             for i in range(n):
                 print(a+(i*d),end=', ')
@@ -236,7 +236,7 @@ def gprog(a,r,n):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if n<0:
-            raise TypeError("Number of terms should be positive")
+            raise ValueError("Number of terms should be positive")
         else:
             print(a, end=', ')
             for i in range(1,n):
@@ -251,7 +251,7 @@ def hprog(a,d,n):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if n<0:
-            raise TypeError("Number of terms should be positive")
+            raise ValueError("Number of terms should be positive")
         else:
             for i in range(n):
                 print((a+(i*d))**(-1),end=', ')
@@ -265,7 +265,7 @@ def aseries(a,d,n):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if n<0:
-            raise TypeError("Number of terms should be positive")
+            raise ValueError("Number of terms should be positive")
         else:
             sum=0
             for i in range(n):
@@ -280,7 +280,7 @@ def gseries(a,r,n):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if n<0:
-            raise TypeError("Number of terms should be positive")
+            raise ValueError("Number of terms should be positive")
         else:
             sum=0
             for i in range(n):
@@ -295,7 +295,7 @@ def hseries(a,d,n):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if n<0:
-            raise TypeError("Number of terms should be positive")
+            raise ValueError("Number of terms should be positive")
         else:
             sum=0
             for i in range(n):
@@ -328,7 +328,6 @@ def mulinv(a):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         return (1/a)
-
 
 # isprime() - checks whether the given input is prime or not
 # input - an integer
@@ -400,7 +399,7 @@ def perimeter_sq(s):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if s<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             return 4*s
 
@@ -416,7 +415,7 @@ def perimeter_rec(l,b):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if l<0 or b<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return 2*(l+b)
 
@@ -432,7 +431,7 @@ def perimeter_parallelogram(l,w):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (l<0 or w<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return 2*(l+w)
 
@@ -448,26 +447,25 @@ def perimeter_tri(a,b,c):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (a<0 or b<0) or c<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return a+b+c
 
 # perimeter_trapezium() - gives the perimeter of the trapezium
 # inputs - three integers(height, base1 and base2 of trapezium)
 # output - perimeter using the given height, base1 and base2
-def perimeter_trapezium(h,b1,b2):
-    a=[]
-    a.extend([h,b1,b2])
-    for i in a:
+def perimeter_trapezium(a,b,c,d):
+    a1=[]
+    a1.extend([a,b,c,d])
+    for i in a1:
         if isinstance(i,int) or isinstance(i,float):
             break
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
-    if (h<0 or b1<0) or b2<0:
-        raise TypeError('Inputs for measurement should be positive')
+    if (a<0 or b<0) or (c<0 or d<0):
+        raise ValueError('Inputs for measurement should be positive')
     else:
-        t=b1+b2
-        return h*(t/2)
+        return a+b+c+d
 
 # perimeter_cir() - gives the perimeter of the circle
 # inputs - an integer(radius of the circle)
@@ -477,7 +475,7 @@ def perimeter_cir(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return 2*pi*r
@@ -494,7 +492,7 @@ def area_tri(b,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (b<0 or h<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return 0.5*b*h
 
@@ -506,7 +504,7 @@ def area_sq(a):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if a<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             return a**2
 
@@ -522,7 +520,7 @@ def area_rec(l,b):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (l<0 or b<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return l*b
 
@@ -534,7 +532,7 @@ def area_cir(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return pi*(r**2)
@@ -551,7 +549,7 @@ def area_sector(theta,r):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (theta<0 or r<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         t=theta/360
@@ -569,7 +567,7 @@ def area_parallelogram(b,w):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (b<0 or w<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return b*w
 
@@ -585,7 +583,7 @@ def area_trapezium(h,b1,b2):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (h<0 or b1<0) or b2<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         t=b1+b2
         return h*(t/2)
@@ -602,7 +600,7 @@ def area_ellipse(a,b):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (a<0 or b<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return pi*a*b
@@ -615,7 +613,7 @@ def area_cube(a):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if a<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             return 6*(a**2)
 
@@ -631,7 +629,7 @@ def area_rectangular_prism(w,l,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (w<0 or l<0) or h<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return 2*((w*l)+(h*l)+(h*w))
 
@@ -647,7 +645,7 @@ def area_torus(r1,r2):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r1<0 or r2<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return (pi**2)*((r2**2)-(r1**2))
@@ -660,7 +658,7 @@ def vol_cube(a):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if a<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             return a**3
 
@@ -676,7 +674,7 @@ def vol_cuboid(l,b,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (l<0 or b<0) or h<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return l*b*h
 
@@ -692,7 +690,7 @@ def vol_rectangular_prism(s1,s2,s3):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (s1<0 or s2<0) or s3<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         return s1*s2*s3
 
@@ -708,7 +706,7 @@ def vol_ellipsoid(r1,r2,r3):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r1<0 or r2<0) or r3<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         a=4/3
         pi=22/7
@@ -726,7 +724,7 @@ def vol_pyramid(barea,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (barea<0 or h<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         a=1/3
         return a*barea*h
@@ -743,7 +741,7 @@ def vol_torus(r1,r2):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r1<0 or r2<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         a=1/4
         pi=22/7
@@ -761,7 +759,7 @@ def csa_scylinder(r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r<0 or h<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return 2*pi*r*h
@@ -778,7 +776,7 @@ def tsa_scylinder(r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r<0 or h<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return 2*pi*r*(r+h)
@@ -795,7 +793,7 @@ def vol_scylinder(r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r<0 or h<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return pi*(r**2)*h
@@ -812,10 +810,10 @@ def csa_hcylinder(R,r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0) or h<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return 2*pi*(R+r)*h
@@ -832,10 +830,10 @@ def tsa_hcylinder(R,r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0) or h<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return 2*pi*(R+r)*(R-r+h)
@@ -852,10 +850,10 @@ def vol_hcylinder(R,r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0) or h<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return pi*h*((R**2)-(r**2))
@@ -872,7 +870,7 @@ def csa_scone(r,l):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r<0 or l<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return pi*r*l
@@ -889,7 +887,7 @@ def tsa_scone(r,l):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r<0 or l<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         return pi*r*(l+r)
@@ -906,7 +904,7 @@ def vol_scone(r,l):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (r<0 or l<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         pi=22/7
         h=((l**2)-(r**2))**0.5
@@ -924,10 +922,10 @@ def vol_frustum(R,r,h):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0) or h<0:
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return 1/3*pi*h*((R**2)+(r**2)+(R*r))
@@ -940,7 +938,7 @@ def csa_ssphere(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return 4*pi*(r**2)
@@ -953,7 +951,7 @@ def vol_ssphere(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return 4/3*pi*(r**3)
@@ -970,10 +968,10 @@ def vol_hsphere(R,r):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return 4/3*pi*((R**3)-(r**3))
@@ -986,12 +984,12 @@ def csa_shemisphere(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return 2*pi*(r**2)
 
-# csa_shemisphere() - gives the total surface area of the solid hemisphere
+# tsa_shemisphere() - gives the total surface area of the solid hemisphere
 # inputs - an integer(radius)
 # output - total surface area using the given radius
 def tsa_shemisphere(r):
@@ -999,7 +997,7 @@ def tsa_shemisphere(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return 3*pi*(r**2)
@@ -1012,7 +1010,7 @@ def vol_shemisphere(r):
         raise TypeError("Invalid inputs for type 'int' or 'float'")
     else:
         if r<0:
-            raise TypeError('Inputs for measurement should be positive')
+            raise ValueError('Inputs for measurement should be positive')
         else:
             pi=22/7
             return 2/3*pi*(r**3)
@@ -1029,10 +1027,10 @@ def csa_hhemisphere(R,r):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return 2*pi*((R**2)-(r**2))
@@ -1049,10 +1047,10 @@ def tsa_hhemisphere(R,r):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return pi*(((3*R)**2)+(r**2))
@@ -1069,10 +1067,10 @@ def vol_hhemisphere(R,r):
         else:
             raise TypeError("Invalid inputs for type 'int' or 'float'")
     if (R<0 or r<0):
-        raise TypeError('Inputs for measurement should be positive')
+        raise ValueError('Inputs for measurement should be positive')
     else:
         if r>R:
-            raise TypeError('Outer radius smaller than inner radius')
+            raise ValueError('Outer radius smaller than inner radius')
         else:
             pi=22/7
             return 2/3*pi*((R**3)-(r**3))
